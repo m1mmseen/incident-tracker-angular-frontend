@@ -1,0 +1,107 @@
+.navigation {
+    grid-area: navigation;
+}
+
+.content-area {
+    grid-area: content-area;
+    display: grid;
+    grid-template-areas:
+        'left-panel right-panel';
+    grid-template-columns: 50% 50%; /* divides content area into left and right panels */
+    column-gap: 20px;
+    margin:.5rem;
+    border: #1f2937;
+    box-shadow: 1px 1px 10px 1px #6d6d6d;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.right-panel{
+    grid-area: right-panel;
+    display: grid;
+    grid-template-areas:
+        'headline-1'
+        'incidents'
+        'headline-2'
+        'updates';
+    grid-template-rows: 5% 45% 5% 45%;
+    gap: 10px 0;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.left-panel {
+    grid-area: left-panel;
+    grid-template-rows: 90% 10%;
+    grid-template-areas:
+        'user-form'
+        'btn-group';
+    display: grid;
+}
+
+
+.incidents{
+    grid-area: incidents;
+    overflow-y: scroll;
+}
+.updates{
+    grid-area: updates;
+    overflow-y: scroll;
+}
+
+/* ------ NAVIGATION ---- */
+.navigation{
+    display: flex;
+}
+.nav > h3{
+    padding: .5rem;
+    font-size: 1rem;
+}
+
+.navigation > ul > li{
+    display: inline-block;
+}
+
+.navigation > ul{
+    margin: 0;
+    padding: 0;
+}
+
+.navigation > ul > li{
+    font-weight: bolder;
+    padding: 1.5rem;
+}
+.navigation > ul > li:hover{
+    background-color: #bfddff;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+#navigation-view{
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+
+}
+
+
+@media (min-width: 1920px) {
+    .left-panel {
+        grid-template-rows: 92% 8%;
+    }
+}
+
+.form-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-item-1 {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+
+
+

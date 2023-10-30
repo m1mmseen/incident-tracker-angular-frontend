@@ -1,0 +1,22 @@
+<div class="list-group">
+    <a href="#" class="list-group-item active">
+        <div class="list-group-item-header">
+            <strong>Incident Title</strong>
+            <small>3 days ago</small>
+        </div>
+        <p >Some placeholder content in a paragraph.</p>
+        <small>And some small print.</small>
+    </a>
+    <div class="list-group-item" *ngFor="let incident of incidents" (click)="openDetails(incident.id)">
+        <div class="list-group-item-header">
+            <strong>{{incident.title}}</strong>
+            <small>{{incident.severity}}</small>
+        </div>
+        <p >{{incident.shortDescription}}</p>
+        <div id="updates">
+            <small>newest update: </small>
+            <small>3 days ago</small>
+        </div>
+
+    </div>
+</div>

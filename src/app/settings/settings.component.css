@@ -1,0 +1,58 @@
+/* ----- CUSTOM GRID SETTINGS ----- */
+.navigation {
+    grid-area: navigation;
+}
+.content-area {
+    grid-area: content-area;
+    grid-template-rows: 100%;
+    grid-template-areas:
+        'settings';
+    display: grid;
+    row-gap: 10px;
+    margin:.5rem;
+    border: #1f2937;
+    box-shadow: 1px 1px 10px 1px #6d6d6d;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
+/* ------ NAVIGATION ---- */
+.navigation{
+    display: flex;
+
+}
+.nav > h3{
+    padding: .5rem;
+    font-size: 1rem;
+}
+
+.navigation > ul > li{
+    display: inline-block;
+}
+
+.navigation > ul{
+    margin: 0;
+    padding: 0;
+}
+
+.navigation > ul > li{
+    font-weight: bolder;
+    padding: 1.5rem;
+}
+.navigation > ul > li:hover{
+    background-color: #bfddff;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+#navigation-view{
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.form-item-3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}

@@ -1,0 +1,130 @@
+
+<div class="main-content">
+    <div class="navigation">
+        <h3 id="navigation-view">USER DETAILS</h3>
+
+    </div>
+    <div class="content-area">
+        <div class="left-panel">
+            <form [formGroup]="userForm" class="user-details" (ngSubmit)="saveUser()" >
+                <div class="form-section">
+                    <input type="hidden"
+                            id="id"
+                            formControlName="id">
+                    <div class="form-item-1">
+                        <label for="username">Username</label>
+                        <input type="text"
+                               id="username"
+                               formControlName="username"
+                               required minlength="4" maxlength="40">
+                    </div>
+                    <div class="form-item-1">
+                        <label for="email">Email</label>
+                        <input type="email"
+                               id="email"
+                               formControlName="email"
+                               required minlength="8">
+                    </div>
+                </div>
+                <div class="form-section">
+                    <div class="form-item-1">
+                        <label for="firstname">Firstname</label>
+                        <input type="text"
+                               id="firstname"
+                               formControlName="firstname"
+                               required minlength="4" maxlength="40">
+                    </div>
+                    <div class="form-item-1">
+                        <label for="lastname">Lastname</label>
+                        <input type="text"
+                               id="lastname"
+                               formControlName="lastname"
+                               required minlength="4" maxlength="40">
+                    </div>
+                </div>
+                <hr>
+                <div class="form-section">
+                    <div class="form-item-1">
+                        <label for="userRole">User Role</label>
+                        <select name="user-role"
+                                id="userRole"
+                                formControlName="userRole"
+                                required>
+                            <option value="admin">Admin</option>
+                            <option value="user">User</option>
+                            <option value="reporter">Reporter</option>
+                            <option value="external">External</option>
+                        </select>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-section-password" hidden>
+                    <div class="form-item-1 password">
+                        <label for="password">Password</label>
+                        <input type="text" id="password" required maxlength="40">
+                    </div>
+                    <div class="form-item-1 password">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="text" id="confirm-password" required maxlength="40">
+                    </div>
+                </div>
+
+            </form>
+            <div class="form-actions">
+                <button class="form-button" id="edit" (click)="editUser()" [disabled]="userForm.enabled">Edit</button>
+                <button class="form-button" id="save" [disabled]="userForm.disabled" (click)="saveUser()">Speichern</button>
+                <button class="form-button" id="change-password" [disabled]="userForm.disabled">Change Password</button>
+            </div>
+        </div>
+        <div class="right-panel">
+            <h3 class="headline-1">Assigned incidents</h3>
+            <div class="incidents">
+                <div class="list-group">
+                    <a href="#" class="list-group-item active">
+                        <div class="list-group-item-header">
+                            <strong>Incident Title</strong>
+                            <small>High</small>
+                        </div>
+                        <p >Some placeholder content in a paragraph.</p>
+                        <small>And some small print.</small>
+                    </a>
+                    <a href="#" class="list-group-item" *ngFor="let incident of incidents">
+                        <div class="list-group-item-header">
+                            <strong>{{incident.title}}</strong>
+                            <small>{{incident.severity}}</small>
+                        </div>
+                        <p >{{incident.shortDescription}}</p>
+                        <div id="updates-info">
+                            <small>newest update: </small>
+                            <small>3 days ago</small>
+                        </div>
+
+                    </a>
+                </div>
+
+            </div>
+            <h3 class="headline-2">Created updates</h3>
+            <div class="updates">
+                <div class="list-group">
+                    <a href="#" class="list-group-item active">
+                        <div class="list-group-item-header">
+                            <strong>Connected Incident</strong>
+                            <small>3 days ago</small>
+                        </div>
+                        <p >Some placeholder content in a paragraph.</p>
+                    </a>
+                    <a href="#" class="list-group-item" *ngFor="let incident of incidents">
+                        <div class="list-group-item-header">
+                            <strong>{{incident.title}}</strong>
+                            <small>3 days ago</small>
+                        </div>
+                        <p >{{incident.shortDescription}}</p>
+
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

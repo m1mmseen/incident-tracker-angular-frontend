@@ -1,0 +1,21 @@
+
+<div class="main-content">
+  <div class="navigation">
+    <h3 id="navigation-view">INCIDENTS</h3>
+    <h4 id="incident-filter">FILTER</h4>
+    <ul>
+      <li>All</li>
+      <li>Own</li>
+      <li>Category</li>
+      <li>Severity</li>
+    </ul>
+  </div>
+  <div class="content-area">
+    <div class="left-panel">
+        <app-incident-list (emitter)="send($event)"></app-incident-list>
+    </div>
+    <div class="right-panel">
+        <app-incident-details [id]="id"></app-incident-details>
+    </div>
+  </div>
+</div>

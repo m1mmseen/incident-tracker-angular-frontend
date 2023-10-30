@@ -1,0 +1,72 @@
+
+
+.navigation {
+  grid-area: navigation;
+}
+
+.content-area {
+    grid-area: content-area;
+    display: grid;
+    grid-template-columns: 40% 60%; /* divides content area into left and right panels */
+    margin:.5rem;
+    border: #1f2937;
+    box-shadow: 1px 1px 10px 1px #6d6d6d;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.left-panel {
+  overflow-y: scroll;
+  max-width: 100%;
+}
+
+.right-panel {
+  overflow-y: scroll;
+}
+/* ------ NAVIGATION ---- */
+.navigation{
+  display: flex;
+}
+.nav > h3{
+  padding: .5rem;
+  font-size: 1rem;
+}
+
+.navigation > ul > li{
+  display: inline-block;
+}
+
+.navigation > ul{
+  margin: 0;
+  padding: 0;
+}
+
+.navigation > ul > li{
+  font-weight: bolder;
+  padding: 1.5rem;
+}
+.navigation > ul > li:hover{
+  background-color: #bfddff;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+#navigation-view{
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+
+}
+
+#incident-filter{
+  padding: 1rem;
+  background: #bfddff ;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+
+
+
+

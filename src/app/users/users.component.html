@@ -1,0 +1,43 @@
+
+<div class="main-content">
+  <div class="navigation">
+    <h3 id="navigation-view">USERS</h3>
+    <h4 id="incident-filter">FILTER</h4>
+    <ul>
+      <li>All</li>
+      <li>Admin</li>
+      <li>User</li>
+    </ul>
+  </div>
+  <div class="content-area">
+      <div class="table border">
+          <div class="table-header">
+              <div class="table-row">
+                  <div class="table-data-1 checkbox"><p></p></div>
+                  <div class="table-data-1"><p>Username</p></div>
+                  <div class="table-data-1"><p>Firstname</p></div>
+                  <div class="table-data-1"><p>Lastname</p></div>
+                  <div class="table-data-1"><p>Role</p></div>
+                  <div class="table-data-1"><p>Email</p></div>
+              </div>
+          </div>
+          <div class="table-body">
+              <a class="table-row" *ngFor="let user of users" routerLink="/user-details/{{user.id}}">
+
+                  <div class="table-data-1 checkbox"><input type="checkbox"></div>
+                  <div class="table-data-1"><p>{{user.username}}</p></div>
+                  <div class="table-data-1"><p>{{user.firstname}}</p></div>
+                  <div class="table-data-1"><p>{{user.lastname}}</p></div>
+                  <div class="table-data-1"><p>{{user.userRole}}</p></div>
+                  <div class="table-data-1"><p>{{user.email}}</p></div>
+              </a>
+          </div>
+      </div>
+      <div class="btn-group">
+              <button id="new-user">New User</button>
+              <button id="edit" disabled>Edit</button>
+              <button id="delete" disabled>Delete marked Users</button>
+
+      </div>
+  </div>
+</div>

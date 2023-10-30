@@ -1,0 +1,39 @@
+/* ----- INCIDENT DETAILS ----- */
+
+.incident-details{
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label[for=critical] {
+    color: darkred;
+
+}
+label[for=high] {
+    color: indianred;
+
+}
+label[for=mid] {
+    color: lightcoral;
+}
+label[for=low] {
+    color: lightpink;
+}
+label[for=critical], label[for=high], label[for=mid], label[for=low]{
+    font-weight: bold;
+}
+
+#severity{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+    background-color: var(--bluewhite);
+}
+#updates{
+    display: flex;
+    justify-content: space-between;
+}

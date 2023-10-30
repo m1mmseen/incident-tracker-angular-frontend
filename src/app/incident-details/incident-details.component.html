@@ -1,0 +1,43 @@
+<form [formGroup]="incidentForm" class="incident-details">
+    <h3>{{id}}</h3>
+    <label for="titel">Titel</label>
+    <input type="text" id="titel" required maxlength="40"
+        formControlName="title">
+    <label for="shortdDscription">Description</label>
+    <textarea id="shortdDscription" required maxlength="200" rows="4" cols="50"
+                formControlName="shortDescription"
+    >Describe the incident as best as you can</textarea>
+    <hr>
+    <label for="category">Category</label>
+    <select name="category" id="category" required
+            formControlName="category">
+        <option value="maleware">Maleware</option>
+        <option value="phishing">Phishing</option>
+        <option value="ddos">DDoS Attack</option>
+        <option value="physical">Physical</option>
+    </select>
+    <p>Severity</p>
+    <div id="severity">
+        <input type="radio" id="critical" name="fav_language" value="critical">
+        <label for="critical">Critical</label><br>
+        <input type="radio" id="high" name="fav_language" value="high">
+        <label for="high">High</label><br>
+        <input type="radio" id="mid" name="fav_language" value="mid">
+        <label for="mid">Mid</label>
+        <input type="radio" id="low" name="fav_language" value="low">
+        <label for="low">Low</label>
+    </div>
+    <hr>
+    <label for="assignedUser">User</label>
+    <select name="cars" id="assignedUser" required disabled>
+        <option value="choose">...choose</option>
+    </select>
+
+    <label for="reportDate">Report Date</label>
+    <input type="Date" id="reportDate" required disabled>
+    <div class="form-actions">
+        <button class="form-button" id="edit">Edit</button>
+        <button class="form-button" id="save" disabled>Save</button>
+        <button class="form-button" id="update">New Update</button>
+    </div>
+</form>
